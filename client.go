@@ -75,3 +75,19 @@ func (c *Client) GetAuthTokenWithExpiresIn(username, password string, insecureSk
 
 	return fmt.Sprintf("%s %s", jsonData["token_type"], jsonData["access_token"]), expiresIn, err
 }
+
+func (c *Client) CheckTokenIsValid(token, client_id string) bool {
+	//http.Get(c.uaaUrl.String())
+	http.Post(c.uaaUrl.String(), "", )
+
+	/*
+	NOPE: POST NOPE: /check_token HTTP/1.1
+	Host: server.example.com
+	NOPE: Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+	NOPE: Content-Type: application/x-www-form-urlencoded
+
+	NOPE: token=eyJ0eXAiOiJKV1QiL
+	 */
+
+	return false
+}
